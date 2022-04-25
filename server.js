@@ -34,7 +34,7 @@ const PORT = process.env.PORT || 3000;
 http.listen(PORT, function () {
 	console.log("Server started at " + mainURL);
 
-	mongoClient.connect("mongodb://localhost:27017", function (error, client) {
+	mongoClient.connect("mongodb+srv://itachisama:itachisama@shareit.nyx9i.mongodb.net/my_social_network", function (error, client) {
 		var database = client.db("my_social_network");
 		console.log("Database connected.");
 
