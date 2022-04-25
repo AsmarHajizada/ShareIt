@@ -29,7 +29,9 @@ socketIO.on("connection", function (socket) {
 	socketID = socket.id;
 });
 
-http.listen(3000, function () {
+const PORT = process.env.PORT || 3000;
+
+http.listen(PORT, function () {
 	console.log("Server started at " + mainURL);
 
 	mongoClient.connect("mongodb://localhost:27017", function (error, client) {
